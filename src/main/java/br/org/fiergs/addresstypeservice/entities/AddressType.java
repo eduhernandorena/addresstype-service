@@ -5,17 +5,19 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "CAD_ADDRESSTYPE")
+@SequenceGenerator(name = "seqCad_AddressType", sequenceName = "SEQCAD_ADDRESSTYPE", allocationSize = 1)
 public class AddressType {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "seqCad_AddressType")
     private Long id;
 
     private String code;
