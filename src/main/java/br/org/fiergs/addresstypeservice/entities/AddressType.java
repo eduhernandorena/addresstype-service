@@ -1,9 +1,6 @@
 package br.org.fiergs.addresstypeservice.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -11,6 +8,7 @@ import javax.persistence.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(callSuper = false)
 @Entity
 @Table(name = "CAD_ADDRESSTYPE")
 @SequenceGenerator(name = "seqCad_AddressType", sequenceName = "SEQCAD_ADDRESSTYPE", allocationSize = 1)
